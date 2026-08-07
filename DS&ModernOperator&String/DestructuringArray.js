@@ -11,6 +11,7 @@ const restaurant = {
   }
 };
 
+
 // // Destructuring (way 1)
 // const arr = [2, 4, 5];
 // const a = arr[0];
@@ -30,8 +31,6 @@ const restaurant = {
 // const[first,, second] = restaurant.categories;
 // console.log(first, second);
 
-
-
 // let [main, secondary] = restaurant.categories;
 // console.log(main, secondary);
 
@@ -46,7 +45,6 @@ const restaurant = {
 
 // console.log(main, secondary);
 
-
 // Recieve 2 return values from a function
 // const [starter , main] = restaurant.order(2,0);
 // console.log(starter,main);
@@ -57,7 +55,6 @@ const restaurant = {
 // // console.log(i, j);
 // const [i, , [j, k]] = nested;
 // console.log(i, j, k);
-
 
 // Default values 
 const [p, q, r = 43] = [8, 4];
