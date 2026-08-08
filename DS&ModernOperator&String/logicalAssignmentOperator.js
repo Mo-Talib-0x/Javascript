@@ -37,5 +37,4 @@ console.log(rest2);
 rest1.owner  &&= '<ANONYMOUS>';
 rest2.owner  &&= '<ANONYMOUS>';
 
-console.log(rest1);
 console.log(rest2);
