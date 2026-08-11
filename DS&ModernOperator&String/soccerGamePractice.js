@@ -42,6 +42,8 @@ const game = {
   printGoals: function (...playersArg) {},
 };
 
+// // Practice 1
+
 // Task 1
 const [players1, players2] = game.players;
 
@@ -79,4 +81,26 @@ printGoals("Farid", "Asif", "Danish", "Azam", "Roshan", "Amir", "Mustak");
 team1 < team2 && console.log('Team 1 is more likely to win');
 team1 > team2 && console.log('Team 2 is more likely to win');
 
+
+// // Practice 2
+
+// task 1
+for (const [i, player] of game.scored.entries()) console.log(`Goal ${i + 1} ${player}`);
+
+//task 2
+const odds = Object.values(game.odds);
+let avgOdds = 0;
+for (const odd of odds){
+  avgOdds += odd;
+}
+avgOdds /= odds.length;
+console.log(avgOdds);
+
+//task 3
+
+for (const [team, odd] of Object.entries(game.odds)) {
+  const teamStr = team === 'x'? 'draw' : `victory ${game[team]}`;
+  console.log(`Odd of ${teamStr} ${odd}`);
+
+}
 
