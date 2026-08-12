@@ -78,19 +78,19 @@ printGoals(...game.scored);
 printGoals("Farid", "Asif", "Danish", "Azam", "Roshan", "Amir", "Mustak");
 
 //Task 7
-team1 < team2 && console.log('Team 1 is more likely to win');
-team1 > team2 && console.log('Team 2 is more likely to win');
-
+team1 < team2 && console.log("Team 1 is more likely to win");
+team1 > team2 && console.log("Team 2 is more likely to win");
 
 // // Practice 2
 
 // task 1
-for (const [i, player] of game.scored.entries()) console.log(`Goal ${i + 1} ${player}`);
+for (const [i, player] of game.scored.entries())
+  console.log(`Goal ${i + 1} ${player}`);
 
 //task 2
 const odds = Object.values(game.odds);
 let avgOdds = 0;
-for (const odd of odds){
+for (const odd of odds) {
   avgOdds += odd;
 }
 avgOdds /= odds.length;
@@ -99,8 +99,43 @@ console.log(avgOdds);
 //task 3
 
 for (const [team, odd] of Object.entries(game.odds)) {
-  const teamStr = team === 'x'? 'draw' : `victory ${game[team]}`;
+  const teamStr = team === "x" ? "draw" : `victory ${game[team]}`;
   console.log(`Odd of ${teamStr} ${odd}`);
-
 }
 
+const gameEvents = new Map([
+  [17, "⚽️ GOAL"],
+  [36, "🔁 Substitution"],
+  [47, "⚽️ GOAL"],
+  [61, "🔁 Substitution"],
+  [64, "🔶 Yellow card"],
+  [69, "🔴 Red card"],
+  [70, "🔁 Substitution"],
+  [72, "🔁 Substitution"],
+  [76, "⚽️ GOAL"],
+  [80, "⚽️ GOAL"],
+  [92, "🔶 Yellow card"],
+]);
+
+// // Practice 3
+
+// Task 1
+const events = [...new Set(gameEvents.values())];
+console.log(events);
+
+// Task 2
+gameEvents.delete(64);
+
+// Task 3
+console.log(
+  `An event happened, on average, every ${90 / gameEvents.size} minutes`,
+);
+
+const time = [...gameEvents.keys()];
+console.log(time);
+
+// Task 4
+for (const [min, event] of gameEvents) {
+  const half = min <= 45 ? "FIRST" : "SECOND";
+  console.log(`[${half}HALF] ${min}: ${event}`);
+}
