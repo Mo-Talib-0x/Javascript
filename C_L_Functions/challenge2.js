@@ -21,3 +21,6 @@
 //     }
 //   });
 // })();
+
+
+//A closure can remain alive for as long as something can reach the function that closes over that environment. Once the closure and its environment become unreachable, they become eligible for garbage collection.
