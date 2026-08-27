@@ -178,21 +178,22 @@ btnTransfer.addEventListener('click', function (e) {
   }
 });
 
-btnLoan.addEventListener('click', function(e){
+btnLoan.addEventListener('click', function (e) {
   e.preventDefault();
 
   const amount = Number(inputLoanAmount.value);
 
-  if(amount > 0 && currentAccount.movements.some(move => move >= amount * 0.1)){
-    
-    // Add movement 
+  if (
+    amount > 0 &&
+    currentAccount.movements.some(move => move >= amount * 0.1)
+  ) {
+    // Add movement
     currentAccount.movements.push(amount);
 
     // Update UI
     updateUI(currentAccount);
   }
-})
-
+});
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -203,3 +204,20 @@ const currencies = new Map([
   ['EUR', 'Euro'],
   ['GBP', 'Pound sterling'],
 ]);
+
+
+// flatMap() Method
+const accountMovements = accounts.map(acc => acc.movements);
+console.log(accountMovements);
+
+const totalMovements = accountMovements.flat();
+console.log(totalMovements);
+
+const totalAmount = totalMovements.reduce((acc, mov) => acc + mov, 0);
+console.log(totalAmount);
+
+const totalAmout1 = accounts
+  .flatMap(acc => acc.movements)
+  .reduce((acc, mov) => acc + mov, 0);
+
+console.log(totalAmount);
