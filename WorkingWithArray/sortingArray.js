@@ -1,5 +1,8 @@
 'use strict';
 
+
+// Advance Array methods 
+
 // Strings
 const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
 console.log(owners.sort());
@@ -18,11 +21,25 @@ console.log(movements);
 //   if (a < b) return -1;
 // });
 
-movements.sort((a, b) => a - b);
+// movements.sort((a, b) => a - b);
 
-console.log(movements);
+// console.log(movements);
 
 // Descending
-movements.sort((a, b) => b - a);
+// movements.sort((a, b) => b - a);
+
+
 
 console.log(movements);
+
+const reversedMov = movements.toReversed();
+console.log(reversedMov);
+console.log(movements);
+
+// movements[1] =2000;   // Mutates the original array
+const newMovements = movements.with(1, 2000);
+console.log(newMovements);
+console.log(movements);
+
+
+
