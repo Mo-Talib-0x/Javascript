@@ -230,3 +230,18 @@ const totalAmout1 = accounts
   .reduce((acc, mov) => acc + mov, 0);
 
 console.log(totalAmount);
+
+
+
+labelBalance.addEventListener('click', function () {
+  const movementsUI = Array.from(
+    document.querySelectorAll('.movements__value'),
+    el => Number(el.textContent.replace('€', '')),
+  );
+
+  const movementsUI2 = [...document.querySelectorAll('.movements__value')];
+
+  console.log(movementsUI2.map(el => Number(el.textContent.replace('€', ''))))
+
+  console.log(movementsUI);
+});
