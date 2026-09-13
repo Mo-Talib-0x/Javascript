@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // // let arr = new Array();
 
@@ -29,7 +29,6 @@
 
 // // console.log(arr[6][3]);
 
-
 // const fruits = ['apple', 'banana'];
 
 // fruits.push('mango','orange','guava', 'papaya');
@@ -45,7 +44,6 @@
 // // // slice with no argument creates a shallow copy.
 // // console.log(fruits.slice())
 
-
 // // array.splice(startIndex, deleteCount, item2, ..., itemN);
 
 // // Removing elements
@@ -55,11 +53,11 @@
 // console.log(fruits.splice(1,0,'strawberry', 'watermelon'));
 
 // console.log(fruits);
-// // Replacing elements 
+// // Replacing elements
 // console.log(fruits.splice(1,2, 'Kiwi', 'pineapple'))
 // console.log(fruits);
 
-// // Adding and removing last element of the array 
+// // Adding and removing last element of the array
 // console.log(fruits.splice(fruits.length - 1, 1))
 // console.log(fruits);
 
@@ -68,22 +66,22 @@
 
 // console.log(fruits.includes('Kiwi', 'Dates'));
 
-// Iteration and functional method 
+// Iteration and functional method
 
-const coding = ['js', 'ruby', 'java', 'python', 'cpp'];
+const coding = ["js", "ruby", "java", "python", "cpp"];
 
 const values = coding.forEach((item) => {
-    console.log(item);
-    // return item;
+  console.log(item);
+  // return item;
 });
 
-console.log(values)
+console.log(values);
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // const newNums = myNums.filter((num)=> num > 4);
 
-// // OR 
+// // OR
 
 // const newNums = myNums.filter((num)=> {
 //     num > 4;
@@ -94,10 +92,39 @@ const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const newNumArr = [];
 
 myNums.forEach((num) => {
-    if(num > 4){
-        newNumArr.push(num);
-    }
-})
+  if (num > 4) {
+    newNumArr.push(num);
+  }
+});
 console.log(newNumArr);
 
+const cart = [
+  { name: "Laptop", price: 60000, quantity: 1 },
+  { name: "Mouse", price: 1500, quantity: 2 },
+  { name: "Keyboard", price: 3000, quantity: 1 },
+  { name: "USB Cable", price: 500, quantity: 3 },
+];
 
+const totalAmount = cart.reduce(
+  (acc, cur) => acc + cur.price * cur.quantity,
+  0,
+);
+console.log(totalAmount);
+
+const transactions = [2000, -500, -1200, 5000, -300, 1500, -800];
+
+const totalDeposits = transactions
+  .filter((cur) => cur > 0)
+  .reduce((acc, cur) => acc + cur, 0);
+console.log(totalDeposits);
+
+
+// let balance = 10000;
+// const totalBalance = transactions.map(cur =>
+//     balance = balance + cur
+// );
+
+const totalBalance = transactions.reduce((acc, cur) =>
+    acc + cur, 10000
+);
+console.log(totalBalance);
