@@ -309,165 +309,168 @@ btnSort.addEventListener("click", function (e) {
 /////////////////////////////////////////////////
 // LECTURES
 
-console.log(23 === 23.0);
+// console.log(23 === 23.0);
 
-// Base 10 - 0 to 9
-// Binary base 2 - 0 1
-console.log(0.1 + 0.2);
-console.log(0.1 + 0.2 === 0.3);
+// // Base 10 - 0 to 9
+// // Binary base 2 - 0 1
+// console.log(0.1 + 0.2);
+// console.log(0.1 + 0.2 === 0.3);
 
-// Conversion
-console.log(Number("23"));
-console.log(+"23");
+// // Conversion
+// console.log(Number("23"));
+// console.log(+"23");
 
-// Parsing
-console.log(Number.parseInt("30px", 10));
-console.log(Number.parseInt("e30", 10));
+// // Parsing
+// console.log(Number.parseInt("30px", 10));
+// console.log(Number.parseInt("e30", 10));
 
-console.log(Number.parseInt(" 2.5rem "));
-console.log(Number.parseFloat(" 2.5rem "));
+// console.log(Number.parseInt(" 2.5rem "));
+// console.log(Number.parseFloat(" 2.5rem "));
 
-// console.log(parseFloat('  2.5rem  '));
+// // console.log(parseFloat('  2.5rem  '));
 
-console.log(Number.isNaN(20));
-console.log(Number.isNaN("20"));
+// console.log(Number.isNaN(20));
+// console.log(Number.isNaN("20"));
 
-// Check if value is NaN
-console.log(Number.isNaN(+"20X"));
-console.log(Number.isNaN(23 / 0));
+// // Check if value is NaN
+// console.log(Number.isNaN(+"20X"));
+// console.log(Number.isNaN(23 / 0));
 
-// Checking if value is number
-console.log(Number.isFinite(20));
-console.log(Number.isFinite("20"));
-console.log(Number.isFinite(+"20"));
-console.log(Number.isFinite(23 / 0));
+// // Checking if value is number
+// console.log(Number.isFinite(20));
+// console.log(Number.isFinite("20"));
+// console.log(Number.isFinite(+"20"));
+// console.log(Number.isFinite(23 / 0));
 
-console.log(Number.isInteger(23));
-console.log(Number.isInteger(23.0));
-console.log(Number.isInteger(23 / 0));
+// console.log(Number.isInteger(23));
+// console.log(Number.isInteger(23.0));
+// console.log(Number.isInteger(23 / 0));
 
-console.log("Math and rounding");
+// console.log("Math and rounding");
 
-console.log(Math.sqrt(25));
-console.log(25 ** 1 / 2);
-console.log(8 ** 1 / 3);
+// console.log(Math.sqrt(25));
+// console.log(25 ** 1 / 2);
+// console.log(8 ** 1 / 3);
 
-console.log(Math.max(2, 34, 65, 23));
-console.log(Math.max(2, 34, "65", 23));
-console.log(Math.max(2, 34, "65px", 23));
+// console.log(Math.max(2, 34, 65, 23));
+// console.log(Math.max(2, 34, "65", 23));
+// console.log(Math.max(2, 34, "65px", 23));
 
-console.log(Math.min(2, 34, 65, 23));
+// console.log(Math.min(2, 34, 65, 23));
 
-console.log(Math.PI * Number.parseFloat("10px" ** 2));
+// console.log(Math.PI * Number.parseFloat("10px" ** 2));
 
-console.log(Math.trunc(Math.random() * 6) + 1);
+// console.log(Math.trunc(Math.random() * 6) + 1);
 
-const randomInt = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1)) + min;
+// const randomInt = (min, max) =>
+//   Math.floor(Math.random() * (max - min + 1)) + min;
 
-console.log(randomInt(4, 65));
-console.log(randomInt(0, 3));
+// console.log(randomInt(4, 65));
+// console.log(randomInt(0, 3));
 
-console.log(Math.round(23.3));
-console.log(Math.round(23.9));
+// console.log(Math.round(23.3));
+// console.log(Math.round(23.9));
 
-console.log(Math.ceil(23.3));
-console.log(Math.ceil(23.9));
+// console.log(Math.ceil(23.3));
+// console.log(Math.ceil(23.9));
 
-console.log(Math.floor(23.3));
-console.log(Math.floor("23.9"));
+// console.log(Math.floor(23.3));
+// console.log(Math.floor("23.9"));
 
-console.log(Math.trunc(23.3));
-console.log(Math.trunc(-23.3));
+// console.log(Math.trunc(23.3));
+// console.log(Math.trunc(-23.3));
 
-console.log(Math.floor(-23.3));
+// console.log(Math.floor(-23.3));
 
-console.log((2.7).toFixed(0));
+// console.log((2.7).toFixed(0));
 
-// Rounding decimals
-console.log((2.7).toFixed(3));
-console.log((2.345).toFixed(2));
-console.log(+(2.345).toFixed(2));
+// // Rounding decimals
+// console.log((2.7).toFixed(3));
+// console.log((2.345).toFixed(2));
+// console.log(+(2.345).toFixed(2));
 
-// Remainder
+// // Remainder
 
-console.log(5 % 2);
-console.log(5 / 2);
+// console.log(5 % 2);
+// console.log(5 / 2);
 
-const isEven = (n) => n % 2 === 0;
-console.log(isEven(6));
-console.log(isEven(7));
+// const isEven = (n) => n % 2 === 0;
+// console.log(isEven(6));
+// console.log(isEven(7));
 
-labelBalance.addEventListener("click", function () {
-  [...document.querySelectorAll(".movements__row")].forEach(function (row, i) {
-    if (i % 2 === 0) row.style.backgroundColor = "orangered";
-    if (i % 3 === 0) row.style.backgroundColor = "blue";
-  });
-});
+// labelBalance.addEventListener("click", function () {
+//   [...document.querySelectorAll(".movements__row")].forEach(function (row, i) {
+//     if (i % 2 === 0) row.style.backgroundColor = "orangered";
+//     if (i % 3 === 0) row.style.backgroundColor = "blue";
+//   });
+// });
 
 // BigInt
-console.log(2 ** 53 - 1);
-console.log(Number.MAX_SAFE_INTEGER);
-console.log(2 ** 53 + 1);
-console.log(2 ** 53 + 2);
-console.log(2 ** 53 + 3);
-console.log(2 ** 53 + 4);
+// console.log(2 ** 53 - 1);
+// console.log(Number.MAX_SAFE_INTEGER);
+// console.log(2 ** 53 + 1);
+// console.log(2 ** 53 + 2);
+// console.log(2 ** 53 + 3);
+// console.log(2 ** 53 + 4);
 
-console.log(18437523789763489768792346578943n);
-console.log(BigInt(9872363456234));
+// console.log(18437523789763489768792346578943n);
+// console.log(BigInt(9872363456234));
 
-// operations
-console.log(10000n + 10000n);
-console.log(1849756187246878974893838946n * 10000000n);
+// // operations
+// console.log(10000n + 10000n);
+// console.log(1849756187246878974893838946n * 10000000n);
 
-const huge = 2093845894389895468n;
-const num = 23;
+// const huge = 2093845894389895468n;
+// const num = 23;
 
-console.log(huge * BigInt(num));
+// console.log(huge * BigInt(num));
 
 // Exceptions
-console.log(20n > 15);
-console.log(20n === 20);
-console.log(20n == 20);
-console.log(typeof 20n);
-console.log(20n == "20");
+// console.log(20n > 15);
+// console.log(20n === 20);
+// console.log(20n == 20);
+// console.log(typeof 20n);
+// console.log(20n == "20");
 
-console.log(huge + " is REALLY big!!!");
+// console.log(huge + " is REALLY big!!!");
 
-// Divisions
-console.log(11n / 3n);
-console.log(10 / 3);
+// // Divisions
+// console.log(11n / 3n);
+// console.log(10 / 3);
 
 // Create a date
 // const now = new Date();
 // console.log(now);
 
-console.log(new Date("Aug 02 2020 18:05:41"));
-console.log(new Date("December 24, 2015"));
-console.log(new Date(account1.movementsDates[0]));
+// console.log(new Date("Aug 02 2020 18:05:41"));
+// console.log(new Date("December 24, 2015"));
+// console.log(new Date(account1.movementsDates[0]));
 
-console.log(new Date(2037, 10, 19, 15, 23, 5));
-console.log(new Date(2037, 10, 31));
+// console.log(new Date(2037, 10, 19, 15, 23, 5));
+// console.log(new Date(2037, 10, 31));
 
-console.log(new Date(0));
-console.log(new Date(3 * 24 * 60 * 60 * 1000));
+// console.log(new Date(0));
+// console.log(new Date(3 * 24 * 60 * 60 * 1000));
 
 // Working with dates
 const future = new Date(2037, 10, 19, 15, 23);
-console.log(future);
-console.log(future.getFullYear());
-console.log(future.getMonth());
-console.log(future.getDate());
-console.log(future.getDay());
-console.log(future.getHours());
-console.log(future.getMinutes());
-console.log(future.getSeconds());
-console.log(future.toISOString());
-console.log(future.getTime());
+// console.log(future);
+// console.log(future.getFullYear());
+// console.log(future.getMonth());
+// console.log(future.getDate());
+// console.log(future.getDay());
+// console.log(future.getHours());
+// console.log(future.getMinutes());
+// console.log(future.getSeconds());
+// console.log(future.toISOString());
+// console.log(future.getTime());
 
-console.log(new Date(21839480000));
+// console.log(new Date(21839480000));
 
-console.log(Date.now());
+// console.log(Date.now());
 
-future.setFullYear(2040);
-console.log(future);
+// future.setFullYear(2040);
+// console.log(future);
+
+
+console.log(+future);
